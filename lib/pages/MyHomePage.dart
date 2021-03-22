@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("30 Days of flutter"),
+        title: Text("30 Days of Flutter"),
       ),
       body: Center(
         child: Text("I am learning $days days of flutter form $name"),
