@@ -1,3 +1,4 @@
+//model class
 class Photo {
   final num albumId;
   final num id;
