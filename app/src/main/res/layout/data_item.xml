@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:id="@+id/dataItem"
+    android:background="@color/first_color">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+
+        <TextView
+            android:id="@+id/dataItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/poppins"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/dataItemArrow"
+        style="@style/Widget.AppCompat.DrawerArrowToggle"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="7dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_right_arrow" />
+
+</RelativeLayout>

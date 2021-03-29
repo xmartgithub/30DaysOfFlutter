@@ -1,0 +1,50 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.UberDoktor" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/second_color</item>
+        <!-- Secondary brand color. -->
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/colorPrimary</item>
+        <!-- Customize your theme here. -->
+        <item name="fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@android:style/TextAppearance">
+
+        <item name="titleTextColor">@color/black</item> <!-- Style vs appearance. -->
+        <item name="android:textSize">28sp</item> <!-- Style vs appearance. -->
+        <item name="android:fontFamily">@font/poppins</item> <!-- Style vs appearance. -->
+    </style>
+
+    <style name="Theme.UberDoktor.ActionBar" parent="Base.Theme.AppCompat.Light">
+        <item name="android:textSize">12sp</item>     <!-- Style vs appearance. -->
+        <item name="elevation">4dp</item> <!-- No prefix. -->
+    </style>
+
+    <style name="Theme.UberDoktor.NoActionBar" parent="Theme.AppCompat.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+    </style>
+
+    <style name="Title" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light" parent="Base.Theme.AppCompat.Light">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Theme.UberDoktor.SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.UberDoktor.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.UberDoktor.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

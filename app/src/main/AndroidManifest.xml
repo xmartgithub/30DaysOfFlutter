@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.uberdoktor.android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.UberDoktor"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity
+            android:name=".activity.PatientAddressActivity"
+            android:parentActivityName=".activity.PatientConsultationsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.DoctorSchedulesActivity"
+            android:parentActivityName=".activity.DoctorMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.DocAddSpecialityActivity"
+            android:parentActivityName=".activity.CredentialsActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.CredentialsActivity"
+            android:parentActivityName=".activity.DoctorMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.DoctorOTPVerificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.UberDoktor.NoActionBar" />
+        <activity
+            android:name=".activity.DoctorEducationDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TreatmentActivity"
+            android:parentActivityName=".activity.DoctorMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.AppointmentFeedback"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.DemoYearsActivity"
+            android:parentActivityName=".activity.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.DoctorProfileActivity"
+            android:parentActivityName=".activity.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.PortfolioActivity"
+            android:parentActivityName=".activity.DoctorMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.DoctorProfileDetailsActivity"
+            android:parentActivityName=".activity.DoctorMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.VideoCall"
+            android:parentActivityName=".activity.DoctorMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.OutgoingAppointmentActivity"
+            android:parentActivityName=".activity.DoctorMainActivity" />
+        <activity android:name=".activity.IncomingVideoCallActivity" />
+        <activity
+            android:name=".activity.DocAddEducationActivity"
+            android:parentActivityName=".activity.CredentialsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.DoctorConsultationActivity"
+            android:parentActivityName=".activity.DoctorMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.ReviewsActivity"
+            android:parentActivityName=".activity.DoctorMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.EarningsActivity"
+            android:parentActivityName=".activity.DoctorMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.ScheduleTimeActivity"
+            android:parentActivityName=".activity.DoctorMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.DoctorMainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.UberDoktor.NoActionBar" />
+        <activity
+            android:name=".activity.PaymentMethodActivity"
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.PatientDetailActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.AppointmentTimeActivity"
+            android:parentActivityName=".activity.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.SpecialityActivity"
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.PaymentsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.MedicalHistoryActivity"
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.PatientConsultationsActivity"
+            android:parentActivityName=".activity.MedicalHistoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.UberDoktor.ActionBar" />
+        <activity
+            android:name=".activity.PatientProfileDetailsActivity"
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.PatientPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.UberDoktor.NoActionBar" />
+        <activity
+            android:name=".activity.DoctorPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.UberDoktor.NoActionBar" />
+        <activity
+            android:name=".activity.HelpActivity"
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.UberDoktor.NoActionBar" />
+        <activity
+            android:name=".activity.PatientOTPVerificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.UberDoktor.NoActionBar" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.UberDoktor.NoActionBar" />
+        <activity
+            android:name=".activity.SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.UberDoktor.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

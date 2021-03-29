@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F8F9FA"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:theme="@style/Theme.Design.Light.NoActionBar"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="100dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="4"
+            android:fontFamily="@font/arial"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="@string/select_what_you_want_bottom_sheet_title"
+            android:textColor="@color/blueColor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/custom_search_bordered_bg"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="8dp"
+            android:src="@drawable/ic_search" />
+
+        <EditText
+            android:layout_width="311dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:fontFamily="@font/poppins"
+            android:hint="Search for Specialization"
+            android:maxLines="1"
+            android:textColor="#565656"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+    <GridView
+        android:id="@+id/grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="2"
+        android:verticalSpacing="5dp" />
+
+
+</LinearLayout>

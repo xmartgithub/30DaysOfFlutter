@@ -1,0 +1,200 @@
+<resources>
+    <string name="app_name">Uber Doktor</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_logo_text">App logo</string>
+    <string name="phone_no_hint">Mobile no. e.g 923xxxxxxxxx</string>
+    <string name="btn_text">Continue</string>
+    <string name="click_here_text">Click here for</string>
+    <string name="login_text">Login</string>
+    <string name="are_you_a_doctor_text">Are you a Doctor?</string>
+    <string name="login_btn_text">Login</string>
+    <string name="enter_otp_hint_text">Enter OTP</string>
+    <string name="verify_btn_text">Verify</string>
+    <string name="switch_doctor_online_text">Online</string>
+    <string name="switch_doctor_offline_text">Offline</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="sign_up_btn_text">Sign Up</string>
+    <string name="password_hint">Password</string>
+    <string name="select_what_you_want_bottom_sheet_title">Find your specialist here</string>
+    <string name="view_all_text"><u>View All</u></string>
+    <string name="top_316_general_physicians_in_lahore">Top 316 General Physicians in Lahore</string>
+    <string name="add_review_main_heading">Add Review</string>
+    <string name="submit_review_activity_appointment_information_tv">Appointment Information</string>
+    <string name="submit_review_activity_share_your_experience_optional_tv">Share your experience (Optional)</string>
+    <string name="submit_review_activity_patient_name_tv">Farhan Ajmal Khan</string>
+    <string name="dr_name_tv">Dr. Tayyab Farooq</string>
+    <string name="submit_review_activity_review_et_hint">Please write your review here to help other patients make informed decision.</string>
+    <string name="submit_review_activity_add_review_btn_tv">Add Review</string>
+    <string name="submit_review_activity_appointment_date_time_tv">Feb 04,2021, 9:45 AM</string>
+    <string name="dr_degree_tv">Dr. Degree and Specialization</string>
+    <string name="consultation_activity_symptoms_tab_title">Symptoms</string>
+    <string name="consultation_activity_diagnosis_tab_title">Diagnosis</string>
+    <string name="consultation_activity_treatment_tab_title">Treatment</string>
+    <string name="degree_name_label_tv">Degree Name:</string>
+    <string name="insti_name_label_tv">Inst. Name:</string>
+    <string name="speciality_et_label_tv">Speciality:</string>
+    <string name="credential_activity_actied_hint_example_m_b_b_s">example M.B.B.S</string>
+    <string name="ongoing_appointment_tag">Ongoing</string>
+    <string name="select_schedule_date_and_time">Select Schedule Date and Time</string>
+    <string name="wait_time_tv">wait time</string>
+    <string name="satisfied_tv">satisfied</string>
+    <string name="view_profile_btn_tv">View Profile</string>
+    <string name="book_appointment_tv">Book Appointment</string>
+    <string name="loading_tv">Loading...</string>
+    <string name="speciality_title_text">Specialities</string>
+    <string name="education_title_tv">Education</string>
+    <string name="tv_doc_total_earnings">Total Earnings</string>
+    <string name="tv_total_patients">Total Patients</string>
+    <string name="uploading_tv">Uploading...</string>
+
+    <string-array name="gender_selection">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="required_spinner">
+        <item>Select</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="cities_spinner">
+        <item>Abdul Hakim</item>
+        <item>Adamke Cheema</item>
+        <item>Adam Wehain</item>
+        <item>Adda Pahrianwali</item>
+        <item>Ahmadpur East</item>
+        <item>Ahsan Pur</item>
+        <item>Alipur</item>
+        <item>Ali Pur Chattha</item>
+        <item>Amara Kalan</item>
+        <item>Aminabad</item>
+        <item>Amin Garh</item>
+        <item>Arif Wala</item>
+        <item>Aroop Town</item>
+        <item>Attock</item>
+        <item>Attowala</item>
+        <item>Awagat</item>
+        <item>Badiana</item>
+        <item>Badomalhi</item>
+        <item>Bagha</item>
+        <item>Baglow Yatimwala</item>
+        <item>Bagwal Awan</item>
+        <item>Baha Wal Garh</item>
+        <item>Bahawalnagar</item>
+        <item>Bahawalpur</item>
+        <item>Bani Gala</item>
+        <item>Barakahu</item>
+        <item>Barian</item>
+        <item>Baseerpur</item>
+        <item>Baseer Pur</item>
+        <item>Begowal</item>
+        <item>Behal</item>
+        <item>Bewal</item>
+        <item>Bhabra</item>
+        <item>Bhaddar</item>
+        <item>Bhagowal Kalan</item>
+        <item>Bhagtanwala</item>
+        <item>Bhai Pheru</item>
+        <item>Bhakkar</item>
+        <item>Bhalwal</item>
+        <item>Bhaun</item>
+        <item>Bhawana</item>
+        <item>Burewala</item>
+        <item>Chachran Sharif</item>
+        <item>Chak</item>
+        <item>Chakwal</item>
+        <item>Changa Manga</item>
+        <item>Chechian</item>
+        <item>Chashma</item>
+        <item>Cheenab Nagar</item>
+        <item>Chichawatni</item>
+        <item>Chillianwala</item>
+        <item>Chiniot</item>
+        <item>Chishtian</item>
+        <item>Chitti Sheikhan</item>
+        <item>Cod Kala</item>
+        <item>D.G Khan</item>
+        <item>Dahranwala</item>
+        <item>Daira Din Panah</item>
+        <item>Daiwal</item>
+        <item>Dandot</item>
+        <item>Daska</item>
+        <item>Daud Khel</item>
+        <item>Depalpur</item>
+        <item>Dhoria</item>
+        <item>Ellah Abad</item>
+        <item>Faislabad</item>
+        <item>Faizaabad</item>
+        <item>Fort Abbas</item>
+        <item>Gojara</item>
+        <item>Gujran Wala</item>
+        <item>Gunna</item>
+        <item>Hafizabad</item>
+        <item>Hasilpur</item>
+        <item>Hujra Shah Muqeem</item>
+        <item>Jalal Pur Bhattian</item>
+        <item>Jamalpur</item>
+        <item>Jarranwala</item>
+        <item>Jassar</item>
+        <item>Jhang</item>
+        <item>Jhelum</item>
+        <item>Kamalia</item>
+        <item>Kamar Mushani</item>
+        <item>Kamoke</item>
+        <item>Kamara</item>
+        <item>Kasur</item>
+        <item>Kharian</item>
+        <item>Khewara</item>
+        <item>Kot Addu</item>
+        <item>Lahore</item>
+        <item>Lala Musa</item>
+        <item>Layyah</item>
+        <item>Mailsi</item>
+        <item>Manawala</item>
+        <item>Mandi Bhaudin</item>
+        <item>Mithan Kot</item>
+        <item>Multan</item>
+        <item>Murree</item>
+        <item>Muridke</item>
+        <item>Nandipur</item>
+        <item>Narowal</item>
+        <item>Naudero</item>
+        <item>Okara</item>
+        <item>Pak Pattan</item>
+        <item>Pasroor</item>
+        <item>Phalia</item>
+        <item>Pir Ghani</item>
+        <item>Qasba Gujrat</item>
+        <item>Queta</item>
+        <item>Rahim Yar Khan</item>
+        <item>Raj Kot</item>
+        <item>Rawalpindi</item>
+        <item>Rehmat Abad</item>
+        <item>Sadiqabad</item>
+        <item>Sahiwal</item>
+        <item>Sangla Hill</item>
+        <item>Sargodha</item>
+        <item>Shahdara</item>
+        <item>Sheikhupura</item>
+        <item>Sialkot</item>
+        <item>Taxila</item>
+        <item>Toba Tek Singh</item>
+        <item>Uch Sharif</item>
+        <item>Ugoki</item>
+        <item>Vanjari</item>
+        <item>Vehari</item>
+        <item>Wah Cantt</item>
+        <item>Yousaf Wala</item>
+        <item>Zafar Wal</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#FFFFFFFF</color>
+    <color name="blueColor">#0026E1</color>
+    <color name="activityBgColor">#f8f9fa</color>
+    <color name="first_color">#03A9F4</color>
+    <color name="second_color">#05E283</color>
+    <color name="black">#FF000000</color>
+    <color name="dividerColor">#D6D7D7</color>
+    <color name="level_0">#03A9F4</color>
+    <color name="level_1">#FFFFFFFF</color>
+    <color name="level_2">#ff4081</color>
+    <color name="level_3">#8e44ad</color>
+    <color name="level_4">#f1c40f</color>
+    <color name="level_5">#ff1744</color>
+    <color name="editTextLightColor">#10aaaaaa</color>
+
+</resources>

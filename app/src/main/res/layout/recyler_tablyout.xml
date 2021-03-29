@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_profile_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/p2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/doctor_full_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/tw_cen_mt"
+        android:text="Dr. Johan David"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/user_profile_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/tw_cen_mt"
+        android:text="Uber Doktor Video Consultation (online)"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/user_profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/doctor_full_name" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Fee:"
+        app:layout_constraintBottom_toBottomOf="@+id/appointment_fee"
+        app:layout_constraintStart_toEndOf="@+id/user_profile_image"
+        app:layout_constraintTop_toTopOf="@+id/appointment_fee" />
+
+    <TextView
+        android:id="@+id/appointment_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/tw_cen_mt"
+        android:layout_marginTop="4dp"
+        android:text="500"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/textView26"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <com.nshmura.recyclertablayout.RecyclerTabLayout
+        android:id="@+id/recycler_tab_layout"
+        rtl_tabBackground="?attr/selectableItemBackground"
+        rtl_tabIndicatorColor="?attr/colorAccent"
+        rtl_tabIndicatorHeight="2dp"
+        rtl_tabMaxWidth="264dp"
+        rtl_tabMinWidth="72dp"
+        rtl_tabPadding="0dp"
+        rtl_tabPaddingBottom="0dp"
+        rtl_tabPaddingEnd="12dp"
+        rtl_tabPaddingStart="12dp"
+        rtl_tabPaddingTop="0dp"
+        rtl_tabSelectedTextColor="?android:colorPrimary"
+        rtl_tabTextAppearance="@android:style/TextAppearance.Small"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/second_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appointment_fee" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_tab_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
