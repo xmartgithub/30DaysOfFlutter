@@ -22,13 +22,13 @@ class _HomePageState extends State<HomePage> {
   }
 
   loadData() async {
-  await  Future.delayed(Duration(seconds: 2));
+    await Future.delayed(Duration(seconds: 2));
     final photoJson = await rootBundle.loadString("assets/files/photo.json");
     final decodedData = jsonDecode(photoJson);
-    PhotoModel.photos = List.from(decodedData).map<Photo>((photo) => Photo.fromMap(photo)).toList();
-    setState(() {
-
-    });
+    PhotoModel.photos = List.from(decodedData)
+        .map<Photo>((photo) => Photo.fromMap(photo))
+        .toList();
+    setState(() {});
   }
 
   @override
@@ -40,16 +40,50 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: (PhotoModel.photos!=null && PhotoModel.photos.isNotEmpty)? ListView.builder(
-          itemCount: PhotoModel.photos.length,
-          itemBuilder: (context, index) {
-            return PhotoWidget(photo: PhotoModel.photos[index]);
-          },
-        ):Center(
-          child: CircularProgressIndicator(),
-        ),
+        child: (PhotoModel.photos != null && PhotoModel.photos.isNotEmpty)
+            ? GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 16.0,
+                  crossAxisSpacing: 16.0,
+                ),
+                itemBuilder: (context, index) {
+                  final photo = PhotoModel.photos[index];
+                  return Card(
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    child: GridTile(
+                      header: Container(
+                        child: Text(photo.title),
+                        padding: const EdgeInsets.all(12.0),
+                        decoration: BoxDecoration(
+                          color: Colors.amber,
+                        ),
+                      ),
+                      child: Image.network(photo.url),
+                      footer: Container(
+                        child: Text(
+                          photo.id.toString(),
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                        padding: const EdgeInsets.all(12.0),
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  );
+                },
+                itemCount: PhotoModel.photos.length,
+              )
+            : Center(
+                child: CircularProgressIndicator(),
+              ),
       ),
-
       drawer: MyDrawer(),
     );
   }
