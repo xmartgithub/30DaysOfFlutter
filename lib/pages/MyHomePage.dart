@@ -54,6 +54,7 @@ class _HomePageState extends State<HomePage> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
+                    //Day 16 half grid view done
                     child: GridTile(
                       header: Container(
                         child: Text(photo.title),
