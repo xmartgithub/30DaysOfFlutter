@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:thirty_day_of_flutter/models/photo.dart';
-import 'package:thirty_day_of_flutter/widgets/drawer.dart';
-import 'package:thirty_day_of_flutter/widgets/item_widgets.dart';
+import 'package:thirty_day_of_flutter/widgets/themes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -34,58 +34,115 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text("30 Days of Flutter"),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: (PhotoModel.photos != null && PhotoModel.photos.isNotEmpty)
-            ? GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  mainAxisSpacing: 16.0,
-                  crossAxisSpacing: 16.0,
-                ),
-                itemBuilder: (context, index) {
-                  final photo = PhotoModel.photos[index];
-                  return Card(
-                    clipBehavior: Clip.antiAlias,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                    //Day 16 half grid view done
-                    child: GridTile(
-                      header: Container(
-                        child: Text(photo.title),
-                        padding: const EdgeInsets.all(12.0),
-                        decoration: BoxDecoration(
-                          color: Colors.amber,
-                        ),
-                      ),
-                      child: Image.network(photo.url),
-                      footer: Container(
-                        child: Text(
-                          photo.id.toString(),
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        ),
-                        padding: const EdgeInsets.all(12.0),
-                        decoration: BoxDecoration(
-                          color: Colors.black,
-                        ),
-                      ),
-                    ),
-                  );
-                },
-                itemCount: PhotoModel.photos.length,
-              )
-            : Center(
-                child: CircularProgressIndicator(),
-              ),
-      ),
-      drawer: MyDrawer(),
+        backgroundColor: MyTheme.creamColor,
+        // appBar: AppBar(
+        //   centerTitle: true,
+        //   title: Text("30 Days of Flutter"),
+        // ),
+        body: SafeArea(
+          child: Container(
+            padding: Vx.m32,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                PhotoHeader(),
+                if (PhotoModel.photos != null && PhotoModel.photos.isNotEmpty)
+                  PhotosList().expand()
+                else
+                  Center(
+                    child: CircularProgressIndicator(),
+                  )
+              ],
+            ),
+          ),
+        ));
+  }
+}
+
+class PhotosList extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      shrinkWrap: true,
+      itemCount: PhotoModel.photos.length,
+      itemBuilder: (context, index) {
+        final photo = PhotoModel.photos[index];
+        return PhotoItem(
+          photo: photo,
+        );
+      },
+    );
+  }
+}
+
+class PhotoItem extends StatelessWidget {
+  final Photo photo;
+
+  const PhotoItem({Key key, @required this.photo}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return VxBox(
+        child: Row(
+      children: [
+        PhotoWidget(image: photo.url),
+        Expanded(
+            child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            photo.title.text.bold.color(MyTheme.darkBluishColor).make(),
+            photo.id.text.textStyle(context.captionStyle).make(),
+            ButtonBar(
+              alignment: MainAxisAlignment.spaceBetween,
+              children: [
+                "\$${photo.id}".text.bold.xl.make(),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: "Buy".text.make(),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(MyTheme.darkBluishColor),
+                    shape: MaterialStateProperty.all(StadiumBorder())
+                  )
+                )
+              ],
+            )
+          ],
+        ))
+      ],
+    )).white.roundedLg.square(151.0).make().py16();
+  }
+}
+
+class PhotoWidget extends StatelessWidget {
+  final String image;
+
+  const PhotoWidget({Key key, @required this.image}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Image.network(image)
+          .box
+          .rounded
+          .p16
+          .color(MyTheme.creamColor)
+          .make()
+          .w32(context),
+    );
+  }
+}
+
+class PhotoHeader extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        "Photo App".text.xl4.bold.color(MyTheme.darkBluishColor).make(),
+        "Trending products".text.xl2.make(),
+      ],
     );
   }
 }
