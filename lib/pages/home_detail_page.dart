@@ -9,10 +9,13 @@ class HomeDetailPage extends StatelessWidget {
   const HomeDetailPage({Key key, @required this.catalog})
       : assert(catalog != null),
         super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       backgroundColor: MyTheme.creamColor,
       bottomNavigationBar: Container(
         color: Colors.white,
@@ -30,10 +33,10 @@ class HomeDetailPage extends StatelessWidget {
                   shape: MaterialStateProperty.all(
                     StadiumBorder(),
                   )),
-              child: "Buy".text.make(),
-            ).wh(100, 50)
+              child: "Add to cart".text.make(),
+            ).wh(120, 50)
           ],
-        ).p32(),
+        ).p16(),
       ),
       body: SafeArea(
         bottom: false,
@@ -44,25 +47,30 @@ class HomeDetailPage extends StatelessWidget {
               child: Image.network(catalog.image),
             ).h32(context),
             Expanded(
-                child: VxArc(
-                  height: 30.0,
-                  arcType: VxArcType.CONVEY,
-                  edge: VxEdge.TOP,
-                  child: Container(
-                    color: Colors.white,
-                    width: context.screenWidth,
-                    child: Column(
-                      children: [
-                        catalog.name.text.xl4
-                            .color(MyTheme.darkBluishColor)
-                            .bold
-                            .make(),
-                        catalog.desc.text.textStyle(context.captionStyle).xl.make(),
-                        10.heightBox,
-                      ],
-                    ).py64(),
-                  ),
-                ))
+              child: VxArc(
+                height: 30.0,
+                arcType: VxArcType.CONVEY,
+                edge: VxEdge.TOP,
+                child: Container(
+                  color: Colors.white,
+                  width: context.screenWidth,
+                  child: Column(
+                    children: [
+                      catalog.name.text.xl4
+                          .color(MyTheme.darkBluishColor)
+                          .bold
+                          .make(),
+                      catalog.desc.text
+                          .textStyle(context.captionStyle)
+                          .xl
+                          .make(),
+                      10.heightBox,
+                      "Lorem ipsum dolore magna aliqua. Dristique risus nec. Sit amet massa vitae tortor condimentum lacinia quis vel. Sed risus pretium quam vulputate dignissim. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Sit amet consectetur adipiscing elit. Tristique senectus et netus et malesuada. Consequat interdum varius sit amet mattis vulputate enim nulla.".text.textStyle(context.captionStyle).make().p16(),
+                    ],
+                  ).py64(),
+                ),
+              ),
+            ),
           ],
         ),
       ),
